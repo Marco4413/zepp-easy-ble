@@ -819,7 +819,9 @@ class Write {
      * .write.enableCharaNotifications('char_uuid', true);
      */
     enableCharaNotifications(chara, enable) {
-        const cccd_val = enable ? "0100" : "0000";
+        // Fix based on https://github.com/espressif/arduino-esp32/blob/70786dc5fa51601f525496d0f92a220c917b4ad9/libraries/BLE/src/BLERemoteCharacteristic.cpp#L467
+        debugLog(3, "call to patched enableCharaNotifications");
+        const cccd_val = enable ? "0200" : "0100";
         const uuid_cccd = "2902";
         const operation = {
             execute: (callback) => {

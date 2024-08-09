@@ -1,4 +1,14 @@
 # 🐦 Easy BLE library for ZeppOS v3+
+
+*This is a fork of the original [easy-ble](https://github.com/zepp-health/easy-ble) from [Zepp Health](https://github.com/zepp-health).*
+
+*This fork includes some fixes to bugs I've encountered while developing for ZeppOS.*
+
+You can install this fork directly with `npm`:
+```bash
+$ npm i https://github.com/Marco4413/zepp-easy-ble
+```
+
 ### Description
 The `Easy BLE` library is an advanced BLE management tool for `ZeppOS 3.0` watches that features an automated profile generator, a hybrid asynchronous and sequential queue for efficient handling of all operations including writing and reading, user-friendly string-based interactions, seamless auto-conversions of data and addresses, support for multiple data types, and simplified device management through MAC address-centric commands, all designed to enhance usability and streamline BLE communications.
 

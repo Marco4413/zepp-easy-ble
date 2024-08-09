@@ -541,7 +541,10 @@ class BLEMaster {
 
         // create the profile object
         const profile_object = {
-            pair: true,
+            // https://docs.zepp.com/docs/reference/device-app-api/newAPI/ble/mstBuildProfile
+            // Says that if pair is set to true, pairing is attempted.
+            // However, it's explicitly stated that BLEMaster.pair() is unstable.
+            pair: false, // Don't attempt pairing by default
             id: device.connect_id,
             profile: device.dev_name || "undefined",
             dev: dev,
